@@ -53,17 +53,17 @@
         margin-bottom: 20px;
     }
 
-    .card button {
+    .card a {
+        display: inline-block;
         padding: 10px 20px;
         background: #3498db;
-        border: none;
         color: white;
         border-radius: 6px;
-        cursor: pointer;
+        text-decoration: none;
         font-size: 14px;
     }
 
-    .card button:hover {
+    .card a:hover {
         background: #2980b9;
     }
 </style>
@@ -80,34 +80,22 @@
     <div class="card">
         <h2>SmartSchool</h2>
         <p>Volg deze link om SmartSchool te openen.</p>
-        <button onclick="openLink('rp.smartschool.be')">
-            SmartSchool
-        </button>
+        <a href="https://rp.smartschool.be">SmartSchool</a>
     </div>
 
     <div class="card">
         <h2>Diagrammen tekenen</h2>
         <p>Met deze tool kan je diagrammen tekenen.</p>
-        <button onclick="openLink('https://app.diagrams.net/')">
-            Draw.io
-        </button>
+        <a href="https://app.diagrams.net/">Draw.io</a>
     </div>
     
     <div class="card">
         <h2>Visual Studio Code</h2>
         <p>Heb je problemen met Visual Studio Code op je computer? Gebruik de online versie.</p>
-        <button onclick="openLink('https://vscode.dev/')">
-            VS Code online
-        </button>
+        <a href="https://vscode.dev/">VS Code online</a>
     </div>
 
 </div>
-
-<script>
-function openLink(url) {
-    window.location.href = url;
-}
-</script>
 
 </body>
 </html>

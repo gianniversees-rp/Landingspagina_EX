@@ -1,16 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
-    <title>Examen</title>
+<meta charset="UTF-8">
+<title>Examen Start</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f8;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    header {
+        background: #2c3e50;
+        color: white;
+        padding: 20px;
+        font-size: 24px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        padding: 40px;
+    }
+
+    .card {
+        background: white;
+        width: 280px;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .card h2 {
+        margin-bottom: 15px;
+        color: #2c3e50;
+    }
+
+    .card p {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .card button {
+        padding: 10px 20px;
+        background: #3498db;
+        border: none;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .card button:hover {
+        background: #2980b9;
+    }
+</style>
 </head>
+
 <body>
-    <h1>Kies een onderdeel</h1>
 
-    <p><a href="https://rp.smartschool.be/Documents/Index/Index/courseID/1363/parentID/120681/ssID/1041">Vakmap 1</a></p>
+<header>
+    Examenomgeving
+</header>
 
-    <p><a href="https://rp.smartschool.be/Documents/Index/Index/courseID/1363/parentID/120683/ssID/1041">Vakmap 2</a></p>
+<div class="container">
 
-    <p><a href="https://rp.smartschool.be/?module=Uploadzone&file=index&function=main&courseID=1363&ssID=1041">Uploadzone</a></p>
+    <!-- Vakmap 1 -->
+    <div class="card">
+        <h2>Vakmap 1</h2>
+        <p>Open de eerste map met opdrachten.</p>
+        <button onclick="openLink('https://rp.smartschool.be/Documents/Index/Index/courseID/1363/parentID/120681/ssID/1041')">
+            Open
+        </button>
+    </div>
+
+    <!-- Vakmap 2 -->
+    <div class="card">
+        <h2>Vakmap 2</h2>
+        <p>Tweede map met extra bestanden.</p>
+        <button onclick="openLink('https://rp.smartschool.be/Documents/Index/Index/courseID/1363/parentID/120683/ssID/1041')">
+            Open
+        </button>
+    </div>
+
+    <!-- Uploadzone -->
+    <div class="card">
+        <h2>Uploadzone</h2>
+        <p>Lever hier je opdracht in.</p>
+        <button onclick="openLink('https://rp.smartschool.be/?module=Uploadzone&file=index&function=main&courseID=1363&ssID=1041')">
+            Upload
+        </button>
+    </div>
+
+</div>
+
+<script>
+function openLink(url) {
+    window.location.href = url;
+}
+</script>
+
 </body>
 </html>
-``
